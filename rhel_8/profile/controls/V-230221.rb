@@ -53,5 +53,11 @@ https://access.redhat.com/support/policy/updates/errata.
   tag fix_id: 'F-32865r567410_fix'
   tag cci: ['CCI-000366']
   tag nist: ['CM-6 b']
+  
+# Start the RHEL-08-230221
+  describe file('/etc/redhat-release') do
+    its('content') { should match /8\.[3-8]/ }
+  end
+# Stop the RHEL-08-230221
 end
 

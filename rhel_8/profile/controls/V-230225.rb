@@ -1,4 +1,5 @@
 # encoding: UTF-8
+banner_message_text = attribute('banner_message_text', value: '^You are accessing', description: 'text to match for banner message')
 
 control 'V-230225' do
   title "RHEL 8 must display the Standard Mandatory DoD Notice and Consent
@@ -154,5 +155,15 @@ Agreement for details.\"
   tag fix_id: 'F-32869r567422_fix'
   tag cci: ['CCI-000048']
   tag nist: ['AC-8 a']
+
+# START_DESCRIBE RHEL-08-230225
+  describe sshd_config do
+    its('Banner') { should eq '/etc/issue' }
+  end
+
+  describe file('/etc/issue') do
+    its('content') { should match /#{banner_message_text}/ }
+  end
+# STOP_DESCRIBE RHEL-08-230225
 end
 

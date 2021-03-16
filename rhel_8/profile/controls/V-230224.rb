@@ -57,5 +57,13 @@ entire partition, dedicate a partition for encryption in the partition layout.
   tag fix_id: 'F-32868r567419_fix'
   tag cci: ['CCI-001199']
   tag nist: ['SC-28']
+# START_DESCRIBE RHEL-08-230224
+  blkids = command('sudo blkid').stdout.split("\n")
+  blkids.each do |blkid|
+    describe command("echo '#{blkid}'") do
+      its('stdout') { should match /^.+TYPE="crypto_LUKS".*$/ }
+    end
+  end
+# STOP_DESCRIBE RHEL-08-230224
 end
 

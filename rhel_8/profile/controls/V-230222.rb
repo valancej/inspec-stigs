@@ -58,5 +58,11 @@ available from Red Hat within 30 days or sooner as local policy dictates."
   tag fix_id: 'F-32866r567413_fix'
   tag cci: ['CCI-000366']
   tag nist: ['CM-6 b']
+
+  # Start RHEL-08-230222
+  describe command('sudo yum history') do
+    its('stdout') { should match /\|\s+(Update|I,\s+U)\s+\|/ }
+  end
+  # Stop RHEL-08-230222
 end
 
