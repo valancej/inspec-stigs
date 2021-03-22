@@ -28,3 +28,6 @@ Categorize the STIG checks:
 2. Image Build
 3. Deployment
 4. Runtime
+
+List of total automated checks performed.
+List total manual checks required.
