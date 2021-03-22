@@ -39,7 +39,7 @@ List total manual checks required.
 These checks will follow the normal automation process and will report accurate STIG compliance PASS/FAIL.
 
 | Check Number | Description | Type of check |
-|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
+|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
 | V-92597      | Apache web server management includes the ability to control the number of users and user sessions that utilize an Apache web server. Limiting the number of allowed users and sessions per user is helpful in limiting risks related to several types of denial-of-service (DOS) attacks. |
 | V-92599      | Session management is the practice of protecting the bulk of the user authorization and identity information. This data can be stored on the client system or on the server.                                                                                                               |
 | V-92601      | The Apache web server must use cryptography to protect the integrity of remote sessions.                                                                                                                                                                                                   |
