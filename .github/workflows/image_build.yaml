@@ -1,7 +1,7 @@
 name: stig-checks
 on: [push]
 jobs:
-  checkout-repo:
+  stig-checks:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -20,3 +20,5 @@ jobs:
         run: echo "Deploying container"
       - name: STIG checks - Running container
         run: echo "Running STIG checks deployed container"
+      - name: STIG Report
+        run: echo "STIG report for container-id"
