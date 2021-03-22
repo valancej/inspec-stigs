@@ -15,7 +15,9 @@ In the example above, an automated build process could be configured to perform 
 3. **Deployment**: Additional configuration native to the deployment platform (K8s) - Evaluate a collection of STIG checks against any additional configuration for the deployment artifact (ex. K8s configs)
 4. **Runtime**: Running container - Evaluate a collection of STIG checks against the running container. 
 
-## Example STIG (Apache HTTP)
+## Example STIG (Apache Server 2.4)
+
+https://public.cyber.mil/stigs/downloads/
 
 Categorize the STIG checks:
 
@@ -31,3 +33,39 @@ Categorize the STIG checks:
 
 List of total automated checks performed.
 List total manual checks required.
+
+**Automated Checks**
+
+These checks will follow the normal automation process and will report accurate STIG compliance PASS/FAIL.
+
+| Check Number | Description                                                                                                                                                                                                                                                                          |
+|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| V-92597      | Apache web server management includes the ability to control the number of users and user sessions that utilize an Apache web server. Limiting the number of allowed users and sessions per user is helpful in limiting risks related to several types of denial-of-service (DOS) attacks. |
+| V-92599      | Session management is the practice of protecting the bulk of the user authorization and identity information. This data can be stored on the client system or on the server.                                                                                                               |
+| V-92601      | The Apache web server must use cryptography to protect the integrity of remote sessions.                                                                                                                                                                                                   |
+| V-92607      | The Apache web server must have system logging enabled.                                                                                                                                                                                                                                    |
+| V-92609      | The Apache web server must generate, at a minimum, log records for system startup and shutdown, system access, and system authentication events.                                                                                                                                           |
+| V-92629      | The Apache web server log files must only be accessible by privileged users.                                                                                                                                                                                                               |
+| V-92631      | The log information from the Apache web server must be protected from unauthorized modification or deletion.                                                                                                                                                                               |
+| V-92639      | The Apache web server must not perform user management for hosted applications.                                                                                                                                                                                                            |
+| V-92643      | The Apache web server must not be a proxy server.                                                                                                                                                                                                                                          |
+| V-92653      | The Apache web server must have resource mappings set to disable the serving of certain file types.                                                                                                                                                                                        |
+| V-92659      | The Apache web server must have Web Distributed Authoring (WebDAV) disabled.                                                                                                                                                                                                               |
+| V-92661      | The Apache web server must be configured to use a specified IP address and port.                                                                                                                                                                                                           |
+| V-92677      | The Apache web server must invalidate session identifiers upon hosted application user logout or other session termination.                                                                                                                                                                |
+| V-92679      | Cookies exchanged between the Apache web server and client, such as session cookies, must have security settings that disallow cookie access outside the originating Apache web server and hosted application.                                                                             |
+| V-92687      | The Apache web server must generate a session ID long enough that it cannot be guessed through brute force.                                                                                                                                                                                |
+| V-92689      | The Apache web server must generate a session ID using as much of the character set as possible to reduce the risk of brute force.                                                                                                                                                         |
+| V-92697      | The Apache web server must be tuned to handle the operational requirements of the hosted application.                                                                                                                                                                                      |
+| V-92699      | Warning and error messages displayed to clients must be modified to minimize the identity of the Apache web server, patches, loaded modules, and directory paths.                                                                                                                          |
+| V-92701      | Debugging and trace information used to diagnose the Apache web server must be disabled.                                                                                                                                                                                                   |
+| V-92705      | The Apache web server must set an inactive timeout for sessions.                                                                                                                                                                                                                           |
+| V-92723      | The Apache web server must generate log records that can be mapped to Coordinated Universal Time (UTC) or Greenwich Mean Time (GMT) which are stamped at a minimum granularity of one second.                                                                                              |
+| V-92731      | The Apache web server must be protected from being stopped by a non-privileged user.                                                                                                                                                                                                       |
+| V-92741      | Cookies exchanged between the Apache web server and the client, such as session cookies, must have cookie properties set to prohibit client-side scripts from reading the cookie data.                                                                                                     |
+| V-92745      | The Apache web server must remove all export ciphers to protect the confidentiality and integrity of transmitted information.                                                                                                                                                              |
+| V-92749      | The Apache web server must install security-relevant software updates within the configured time period directed by an authoritative source (e.g., IAVM, CTOs, DTMs, and STIGs).                                                                                                           |
+| V-92755      | The Apache web server software must be a vendor-supported version.                                                                                                                                                                                                                         |
+| V-92757      | The Apache web server htpasswd files (if present) must reflect proper ownership and permissions.                                                                                                                                                                                           |
+| V-92759      | HTTP request methods must be limited.                                                                                                                                                                                                                                                      |
+                                                                                
