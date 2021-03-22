@@ -79,3 +79,14 @@ These checks will follow the normal automation process and will report accurate 
 | V-92757      | The Apache web server htpasswd files (if present) must reflect proper ownership and permissions.                                                                                                                                                                                           | Image, runtime |
 | V-92759      | HTTP request methods must be limited.                                                                                                                                                                                                                                                      | App config |
                                                                                 
+
+### Build and deploy process
+
+1. Checkout repo
+2. STIG checks against configuration file and other relevant artifacts present in SCM
+3. Build container image
+4. STIG checks against image artifact
+5. Create deployment configuration
+6. STIG checks against deployment configuration
+7. Deploy container
+8. STIG checks against running container

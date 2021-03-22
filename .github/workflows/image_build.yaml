@@ -4,5 +4,19 @@ jobs:
   checkout-repo:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: echo "Running STIG checks"
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: STIG checks - SCM
+        run: echo "Running STIG checks against artifacts in Git repo"
+      - name: Build image
+        run: echo "Building image"
+      - name: STIG checks - Image build
+        run: echo "Running STIG checks against image"
+      - name: Generate deployment configuration
+        run: echo "Generating deployment configuration"
+      - name: STIG checks - Deployment configuration
+        run: echo "Running STIG checks against deployment configuration"
+      - name: Deploy container
+        run: echo "Deploying container"
+      - name: STIG checks - Running container
+        run: echo "Running STIG checks deployed container"
