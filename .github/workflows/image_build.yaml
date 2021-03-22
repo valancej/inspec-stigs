@@ -1,0 +1,8 @@
+name: stig-checks
+on: [push]
+jobs:
+  checkout-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "Running STIG checks"

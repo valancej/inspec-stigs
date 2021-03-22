@@ -10,10 +10,10 @@ In the context of a container build and deployment, a user might include a defau
 
 In the example above, an automated build process could be configured to perform the relevant STIG checks at each of the following stages in the SDLC:
 
-1. SCM: Default configuration or other static files to be included in the image - Evaluate a collection of STIG checks here against static artifacts such as an `httpd.conf` for Apache.
-2. Image Build: Deployment artifact - Evaluate a collection of STIG checks against the built image (ex. file permissions)
-3. Deployment: Additional configuration native to the deployment platform (K8s) - Evaluate a collection of STIG checks against any additional configuration for the deployment artifact (ex. K8s configs)
-4. Runtime: Running container - Evaluate a collection of STIG checks against the running container. 
+1. **SCM**: Default configuration or other static files to be included in the image - Evaluate a collection of STIG checks here against static artifacts such as an `httpd.conf` for Apache.
+2. **Image Build**: Deployment artifact - Evaluate a collection of STIG checks against the built image (ex. file permissions)
+3. **Deployment**: Additional configuration native to the deployment platform (K8s) - Evaluate a collection of STIG checks against any additional configuration for the deployment artifact (ex. K8s configs)
+4. **Runtime**: Running container - Evaluate a collection of STIG checks against the running container. 
 
 ## Example STIG (Apache HTTP)
 
