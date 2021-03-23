@@ -33,7 +33,7 @@ These checks will follow the normal automation process and will report accurate 
 
 **Note**: Application configuration will likely occur in two places in the SDLC (SCM and deployment)
 
-- 43 total checks (11 manual, 32 automated)
+- 44 total checks (11 manual, 32 automated)
 
 ##### Automated checks
 
@@ -87,4 +87,12 @@ These checks will follow the normal automation process and will report accurate 
 | V-81925 | Manual |
 | V-81927 | Manual |
 | V-81929 | Manual |
+
+
+### Workflow
+
+1. Annotate each of the controls with the stage they will be evaluated in the SDLC. Ex. scm, image, deploy, runtime. The tags sections of each inspec control `.rb` file allows for metadata: ex. sdlc_stages: ["scm"]
+2. Convert inspec controls to json with inspec: `inspec json controls/ > inspec_controls.json`
+3. Filter the controls by sdlc stage and generate a list of controls to pass to inspec. ex. V-81921 V-81923 V-81925 V-81927
+4. Run inspec: `inspec exec controls/ --controls V-81921 V-81923 V-81925 V-81927`
                                                                                                                                                        
