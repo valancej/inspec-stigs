@@ -33,6 +33,14 @@ These checks will follow the normal automation process and will report accurate 
 
 **Note**: Application configuration will likely occur in two places in the SDLC (SCM and deployment)
 
+- 43 total checks (11 manual, 32 automated)
+
+##### Automated checks
+
+- App conf: 21 (2 partial)
+- Image: 3
+- Runtime: 8
+
 | Check Number | Type of check |
 |-----------------|--------------------|
 | V-81843 | App config |
