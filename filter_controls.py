@@ -6,13 +6,13 @@ import yaml
 
 ###### Setup command line parser
 def setup_parser():
-    parser = argparse.ArgumentParser(description="Tool for generating compliance reports per CI/CD stage")
+    parser = argparse.ArgumentParser(description="Tool for filter STIG profile controls per stage in CI/CD")
     parser.add_argument('-s', '--stage', default='none', help='Pipeline step/stage name. ex. scm, image, deployment, runtime')
 
     return parser
 
 def parse_controls(input_stage):
-    
+
     with open("stig_controls_stages.yaml", 'r') as stream:
         try:
             yaml_controls = yaml.safe_load(stream)
