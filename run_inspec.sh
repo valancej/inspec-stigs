@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec
+curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec
 
-# inspec --chef-license=accept
+inspec --chef-license=accept
 
 cd mongodb_enterprise_3.x
 
