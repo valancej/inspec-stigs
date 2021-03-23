@@ -1,5 +1,39 @@
 # Apache 2.4 Server STIG checks
 
+## Example STIG (Apache Server 2.4)
+
+https://public.cyber.mil/stigs/downloads/
+
+Categorize the STIG checks:
+
+1. Manual
+2. Automated
+
+### Automated
+
+1. SCM
+2. Image Build
+3. Deployment
+4. Runtime
+
+List of total automated checks performed.
+List total manual checks required.
+
+**Automated Checks**
+
+These checks will follow the normal automation process and will report accurate STIG compliance PASS/FAIL.
+
+**Types of checks**: 
+
+- Application/software configuration (ex. `httpd.conf`)
+- Build instructions (Dockerfile)
+- Build Artifact (Image)
+- Deployment configuration (k8s yaml)
+- Runtime (container id)
+
+**Note**: Application configuration will likely occur in two places in the SDLC (SCM and deployment)
+                                                                                
+
 | Check Number | Description | Type of check |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
 | V-92597      | Apache web server management includes the ability to control the number of users and user sessions that utilize an Apache web server. Limiting the number of allowed users and sessions per user is helpful in limiting risks related to several types of denial-of-service (DOS) attacks. | App config |
