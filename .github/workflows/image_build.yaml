@@ -7,7 +7,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: STIG checks - SCM
-        run: echo "Running STIG checks against artifacts in Git repo"
+        run: |
+          echo "Running STIG checks against artifacts in Git repo"
+          ./run_inspec.sh
       - name: Build image
         run: echo "Building image"
       - name: STIG checks - Image build
