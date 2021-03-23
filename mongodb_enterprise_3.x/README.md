@@ -3,4 +3,47 @@
 | Check Number | Type of check |
 |-----------------|--------------------|
 | V-81843 | App config |
+| V-81845 | Runtime |
+| V-81847 | App config |
+| V-81849 | Image |
+| V-81851 | Image |
+| V-81853 | Manual |
+| V-81855 | Manual |
+| V-81857 | Runtime |
+| V-81859 | Runtime |
+| V-81861 | App config |
+| V-81863 | App config, runtime |
+| V-81865 | App config, runtime |
+| V-81867 | App config |
+| V-81869 | App config |
+| V-81871 | Image |
+| V-81873 | Manual |
+| V-81875 | App config |
+| V-81877 | Runtime |
+| V-81879 | App config |
+| V-81881 | App config |
+| V-81883 | App config |
+| V-81885 | Manual |
+| V-81887 | Runtime |
+| V-81889 | App config |
+| V-81891 | App config |
+| V-81893 | Manual |
+| V-81895 | App config |
+| V-81897 | Manual |
+| V-81899 | Runtime |
+| V-81901 | App config |
+| V-81903 | App config |
+| V-81905 | App config |
+| V-81907 | App config |
+| V-81909 | Runtime |
+| V-81911 | Runtime |
+| V-81913 | Manual |
+| V-81915 | Manual |
+| V-81917 | Runtime |
+| V-81919 | App config |
+| V-81921 | App config |
+| V-81923 | App config |
+| V-81925 | Manual |
+| V-81927 | Manual |
+| V-81929 | Manual |
                                                                                                                                                        
