@@ -1,4 +1,37 @@
-# MongoDB STIG checks
+# MongoDB 3.x STIG checks
+
+## Example STIG (MongoDB 3.x)
+
+https://public.cyber.mil/stigs/downloads/
+
+Categorize the STIG checks:
+
+1. Manual
+2. Automated
+
+### Automated
+
+1. SCM
+2. Image Build
+3. Deployment
+4. Runtime
+
+List of total automated checks performed.
+List total manual checks required.
+
+**Automated Checks**
+
+These checks will follow the normal automation process and will report accurate STIG compliance PASS/FAIL.
+
+**Types of checks**: 
+
+- Application/software configuration (ex. `mongod.conf`)
+- Build instructions (Dockerfile)
+- Build Artifact (Image)
+- Deployment configuration (k8s yaml)
+- Runtime (container id)
+
+**Note**: Application configuration will likely occur in two places in the SDLC (SCM and deployment)
 
 | Check Number | Type of check |
 |-----------------|--------------------|
