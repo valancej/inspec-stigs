@@ -61,6 +61,7 @@ as documented here:
   tag fix_id: 'F-88769r1_fix'
   tag cci: ['CCI-002475']
   tag nist: ['SC-28 (1)']
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(kmip serverName)) { should_not be_nil }

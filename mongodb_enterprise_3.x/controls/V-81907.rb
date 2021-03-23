@@ -50,6 +50,7 @@ where storage volume holding the auditLog file utilization reaches 75%.
   tag fix_id: 'F-88757r2_fix'
   tag cci: ['CCI-001855']
   tag nist: ['AU-5 (1)']
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(auditLog destination)) { should_not cmp 'file' }

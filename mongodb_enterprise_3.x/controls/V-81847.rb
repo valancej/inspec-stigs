@@ -84,6 +84,7 @@ CCI-001844 CCI-001851 CCI-001858)
   tag nist: ['AU-3', 'AU-3', 'AU-3', 'AU-3', 'AU-3', 'AU-3 (1)', 'AU-5 b',
 'AU-10', 'AU-12 b', 'AU-12 c', 'AU-14 (2)', 'AU-14 (1)', 'AU-3', 'CM-5 (1)',
 'AU-3 (2)', 'AU-4 (1)', 'AU-5 (2)']
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(auditLog destination)) { should cmp 'syslog' }

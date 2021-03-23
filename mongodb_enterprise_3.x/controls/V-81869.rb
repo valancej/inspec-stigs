@@ -63,6 +63,8 @@ and configured correctly:
   tag fix_id: 'F-88719r1_fix'
   tag cci: %w(CCI-000185 CCI-000197)
   tag nist: ['IA-5 (2) (a)', 'IA-5 (1) (c)']
+  tag sdlc_stages: ['scm']
+  
   describe yaml(attribute('mongod_conf')) do
     its(%w(net ssl allowInvalidCertificates)) { should be nil }
   end

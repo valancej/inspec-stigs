@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import sys
+import json
 import yaml
 
 
@@ -8,39 +9,30 @@ import yaml
 def setup_parser():
     parser = argparse.ArgumentParser(description="Tool for filter STIG profile controls per stage in CI/CD")
     parser.add_argument('-s', '--stage', default='none', help='Pipeline step/stage name. ex. scm, image, deployment, runtime')
+    parser.add_argument('-f', '--file', default='inspec_controls.json', help='name of inspec_controls file. output of: inspec json controls/')
 
     return parser
 
-def parse_controls(input_stage):
+# Find and print controls annotated with name of the stage passed to script as input (ex. scm)
+def parse_controls(input_stage, input_file):
 
-    with open("stig_controls_stages.yaml", 'r') as stream:
-        try:
-            yaml_controls = yaml.safe_load(stream)
-        except yaml.YAMLError as exc:
-            print(exc)
+    with open(input_file, 'r') as file:
+        inspec_controls = json.load(file)
 
-    stages = []
-
-    for yaml_stage in yaml_controls.get("stages"):
-        stages.append(yaml_stage)
-
-    if input_stage in stages:
-        found_stage = input_stage
-    else:
-        print("No stage match")
-
-    found_controls = yaml_controls.get("stages").get(found_stage)
-
-    for control in found_controls:
-        print(control, end=" ")
+        for control in inspec_controls.get("controls"):
+            if control.get("tags").get("sdlc_stages"):
+                for stage in control.get("tags").get("sdlc_stages"):
+                    if stage == input_stage:
+                        print(control.get("id"), end=" ")
 
 def main(arg_parser):
 
     parser = arg_parser
     args = parser.parse_args()
     input_stage = args.stage
+    input_file = args.file
 
-    parse_controls(input_stage)
+    parse_controls(input_stage, input_file)
 
 if __name__ == "__main__":
     try:

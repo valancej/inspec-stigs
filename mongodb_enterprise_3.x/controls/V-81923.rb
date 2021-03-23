@@ -60,6 +60,7 @@ configuration file (default location: /etc/mongod.conf).
   tag fix_id: 'F-88773r2_fix'
   tag cci: ['CCI-002422']
   tag nist: ['SC-8 (2)']
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(net ssl mode)) { should cmp 'requireSSL' }

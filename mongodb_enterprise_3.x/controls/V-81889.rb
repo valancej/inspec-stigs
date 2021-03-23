@@ -67,6 +67,7 @@ documentation page at https://docs.mongodb.com/manual/core/document-validation/.
   tag fix_id: 'F-88739r1_fix'
   tag cci: ['CCI-001310']
   tag nist: ['SI-10']
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(security javascriptEnabled)) { should cmp 'false' }

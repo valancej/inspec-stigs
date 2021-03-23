@@ -59,6 +59,7 @@ https://docs.mongodb.com/v3.4/tutorial/configure-ssl/
   tag fix_id: 'F-88717r1_fix'
   tag cci: ['CCI-000196']
   tag nist: ['IA-5 (1) (c)']
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(security authorization)) { should cmp 'enabled' }

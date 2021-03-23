@@ -55,6 +55,7 @@ configuration file or that contains the \"--enableEncryption\" option.
   tag fix_id: 'F-88733r1_fix'
   tag cci: ['CCI-001199']
   tag nist: ['SC-28']
+  tag sdlc_stages: ['scm']
 
   describe yaml(input('mongod_conf')) do
     its(%w(security enableEncryption)) { should cmp 'true' }

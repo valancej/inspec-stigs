@@ -47,6 +47,7 @@ the following sequence of events, ending with the primary:
   tag fix_id: 'F-88751r1_fix'
   tag cci: ['CCI-001914']
   tag nist: ['AU-12 (3)']
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(auditLog destination)) { should cmp 'syslog' }

@@ -73,6 +73,7 @@ file.
   tag fix_id: 'F-88745r1_fix'
   tag cci: ['CCI-001314']
   tag nist: ['SI-11 b']
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(security redactClientLogData)) { should cmp 'true' }

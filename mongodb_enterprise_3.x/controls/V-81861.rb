@@ -59,6 +59,7 @@ user/role permissions.
   tag fix_id: 'F-88711r1_fix'
   tag cci: %w(CCI-000381 CCI-000382)
   tag nist: ['CM-7 a', 'CM-7 b']
+  tag sdlc_stages: ['scm']
 
   mongo_conf_file = attribute('mongod_conf')
   describe.one do

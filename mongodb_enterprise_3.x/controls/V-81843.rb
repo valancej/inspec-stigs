@@ -46,6 +46,7 @@ include the following:
   tag fix_id: 'F-88693r1_fix'
   tag cci: ['CCI-000015']
   tag nist: ['AC-2 (1)']
+  tag sdlc_stages: ['scm']
 
   mongo_conf_file = attribute('mongod_conf')
 

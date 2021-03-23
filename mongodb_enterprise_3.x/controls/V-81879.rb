@@ -42,6 +42,8 @@ file.
   tag fix_id: 'F-88729r1_fix'
   tag cci: ['CCI-001188']
   tag nist: ['SC-23 (3)']
+  tag sdlc_stages: ['scm']
+  
   describe yaml(attribute('mongod_conf')) do
     its(%w(net ssl mode)) { should cmp 'requireSSL' }
   end

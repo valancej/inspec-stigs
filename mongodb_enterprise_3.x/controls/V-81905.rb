@@ -61,6 +61,7 @@ demand.
   tag fix_id: 'F-88755r3_fix'
   tag cci: ['CCI-001849']
   tag nist: ['AU-4']
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(auditLog destination)) { should_not cmp 'file' }

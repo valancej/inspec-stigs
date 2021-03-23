@@ -77,6 +77,7 @@ SRG-APP-000416-DB-000380)
   tag fix_id: 'F-88725r1_fix'
   tag cci: %w(CCI-000803 CCI-002450)
   tag nist: %w(IA-7 SC-13)
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(net ssl FIPSMode)) { should cmp 'true' }

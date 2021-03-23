@@ -50,6 +50,7 @@ file:
   tag fix_id: 'F-88753r1_fix'
   tag cci: ['CCI-001844']
   tag nist: ['AU-3 (2)']
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(storage dbPath)) { should cmp 'data/db' }

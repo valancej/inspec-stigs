@@ -71,6 +71,7 @@ a finding.
   tag fix_id: 'F-88731r1_fix'
   tag cci: %w(CCI-001190 CCI-001665)
   tag nist: %w(SC-24 SC-24)
+  tag sdlc_stages: ['scm']
 
   describe yaml(attribute('mongod_conf')) do
     its(%w(storage journal enabled)) { should cmp 'true' }
